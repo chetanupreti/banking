@@ -1,0 +1,17 @@
+<form>
+<div class="form-group">
+    <label for="exampleUserSearchByCity">Users Searching by city</label>
+  </div>
+  <div class="form-group">
+      <label for="exampleInputCity">User City</label>
+      <input type="text" class="form-control" placeholder="Enter City"  [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="search()">Submit</button>
+  <div>
+    {{data}}
+  </div>
+</form>
