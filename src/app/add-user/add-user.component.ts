@@ -10,15 +10,15 @@ export class AddUserComponent implements OnInit {
   public email;
   public password;
   public city;
-
+  public name;
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
   }
    addUser(){
      alert("in addUser");
-     let url="http://localhost:5000/addUser"
-         this.http.post(url,{"email":this.email,"id":this.id,"password":this.password,"city":this.city})
+     let url="https://backendchetan.herokuapp.com/addUser"
+         this.http.post(url,{"email":this.email,"id":this.id,"name":this.name,"password":this.password,"city":this.city})
          .subscribe((res)=>{
                  alert(res["sms"]);
                  console.log(res["sms"])

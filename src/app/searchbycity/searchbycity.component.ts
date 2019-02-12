@@ -15,7 +15,7 @@ export class SearchbycityComponent implements OnInit {
   }
   search() {
     alert("in serach meathod")
-    let url = "http://localhost:5000/searchbycity";
+    let url = "https://backendchetan.herokuapp.com/searchbycity";
     this.http.post(url, { "city": this.city })
       .subscribe((res) => {
         alert("searched");

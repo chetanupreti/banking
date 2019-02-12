@@ -14,7 +14,7 @@ public id;
   }
   delete(){
     alert("in delete method");
-    let url="http://localhost:5000/delete";
+    let url="https://backendchetan.herokuapp.com/delete";
     this.http.post(url,{"id":this.id})
     .subscribe((res)=>{
        alert(JSON.stringify(res["msg"]));

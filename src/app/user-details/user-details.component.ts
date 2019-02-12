@@ -13,7 +13,7 @@ export class UserDetailsComponent implements OnInit {
   }
   allUser(){
            alert("in allUser method")
-           let url="http://localhost:5000/getAll";
+           let url="https://backendchetan.herokuapp.com/getAll";
            this.http.post(url,{})
            .subscribe((res)=>{
                     console.log(res["data"])
